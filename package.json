@@ -16,13 +16,15 @@
     "express": "^4.13.3",
     "express-stormpath": "^2.3.7",
     "globals": "^8.16.0",
+    "history": "^1.17.0",
+    "material-ui": "^0.14.4",
     "morgan": "^1.6.1",
     "react": "^0.14.5",
     "react-document-title": "^2.0.1",
     "react-dom": "^0.14.5",
     "react-router": "^1.0.3",
     "react-stormpath": "0.5.0",
-    "history": "^1.17.0",
+    "react-tap-event-plugin": "^0.2.2",
     "webpack": "^1.12.9"
   },
   "devDependencies": {
