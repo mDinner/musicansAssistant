@@ -19,6 +19,8 @@ app.get('/css/bootstrap.min.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'build/css/bootstrap.min.css'));
 });
 
+app.get('http://localhost:8000');
+
 stormpath.init(app, {
   website: true,
   web: {
@@ -29,6 +31,8 @@ stormpath.init(app, {
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build/index.html'));
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.on('stormpath.ready', function () {
   console.log('Stormpath Ready');
