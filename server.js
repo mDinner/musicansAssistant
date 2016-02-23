@@ -19,6 +19,15 @@ app.get('/css/bootstrap.min.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'build/css/bootstrap.min.css'));
 });
 
+var dog = [{dog: 'dog'}];
+
+
+app.get(function(req, res) {
+    console.log('instrument');
+    res.json(dog);
+});
+
+
 stormpath.init(app, {
   website: true,
   web: {
