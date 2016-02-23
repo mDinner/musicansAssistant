@@ -4,7 +4,7 @@ var path = require('path');
 var express = require('express');
 var webpack = require('webpack');
 var config = require('./webpack.config');
-
+var mongoose = require('mongoose');
 var app = express();
 var compiler = webpack(config);
 
@@ -20,11 +20,21 @@ app.get('/css/bootstrap.min.css', function (req, res) {
 });
 
 var dog = [{dog: 'dog'}];
+var Instrument = require('./db/models/instrument.js');
+
 
 app.get('/test', function (req, res) {
     console.log('instrument');
     res.json(dog);
 });
+
+app.get('/db', function (req, res){
+    Instrument.find({}, function(err, instruments) {
+          res.json(instruments);
+     });
+});
+
+mongoose.connect('mongodb://localhost/test');
 
 stormpath.init(app, {
   website: true,
