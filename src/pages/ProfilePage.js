@@ -38,8 +38,6 @@ export default class ProfilePage extends UserComponent {
                     <input className="form-control" id="spLastName" value={this.state.user.surname} placeholder="Last Name" disabled="true" />
                   </div>
                 </div>
-
-
                 <div>
                   <TextField
                     hintText="Hint Text"
@@ -74,7 +72,6 @@ export default class ProfilePage extends UserComponent {
                   />
                 </div>
               );
-
 
                 <div className="form-group">
                   <div className="col-sm-offset-4 col-sm-4">
