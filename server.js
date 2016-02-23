@@ -21,12 +21,10 @@ app.get('/css/bootstrap.min.css', function (req, res) {
 
 var dog = [{dog: 'dog'}];
 
-
-app.get(function(req, res) {
+app.get('/test', function (req, res) {
     console.log('instrument');
     res.json(dog);
 });
-
 
 stormpath.init(app, {
   website: true,
