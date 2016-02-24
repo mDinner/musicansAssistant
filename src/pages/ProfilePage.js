@@ -1,12 +1,9 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
-
 import TextField from 'material-ui/lib/TextField';
-
 import { UserComponent } from 'react-stormpath';
 
 export default TextField;
-
 export default class ProfilePage extends UserComponent {
   onFormSubmit(e) {
     e.preventDefault();

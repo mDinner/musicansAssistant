@@ -4,7 +4,7 @@ import { IndexRoute, Route } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';  
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import ReactStormpath, { Router, HomeRoute, LoginRoute, LogoutRoute, AuthenticatedRoute } from 'react-stormpath';
-import { MasterPage, IndexPage, LoginPage, RegisterPage, ResetPasswordPage, VerifyEmailPage, ProfilePage, MemberHomePage } from './pages';
+import { MasterPage, IndexPage, LoginPage, RegisterPage, ResetPasswordPage, VerifyEmailPage, ProfilePage, MemberHomePage, Add } from './pages';
 
 ReactStormpath.init();
 
@@ -20,6 +20,7 @@ ReactDOM.render(
       <AuthenticatedRoute>
         <HomeRoute path='/profile' component={ProfilePage} />
         <Route path='/member' component={MemberHomePage} />
+        <Route path='/add' component={Add} />
       </AuthenticatedRoute>
     </HomeRoute>
   </Router>,
