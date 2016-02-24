@@ -71,7 +71,7 @@ export default class ProfilePage extends UserComponent {
                     rows={2}
                   />
                 </div>
-              );
+              
 
                 <div className="form-group">
                   <div className="col-sm-offset-4 col-sm-4">
