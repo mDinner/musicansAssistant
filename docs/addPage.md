@@ -81,9 +81,13 @@ package.json
 
 Step #4:
 
+go to src/routes.js
+
+add this line in the imports:
+import AddInventory from './components/AddInventory';
+
+and add this line to the routes:
+on('/AddInventory', async () => <AddInventory />);
 
 
-
-Step #5:
-Step #6:
-
+AND YOU'RE DONE!! fire up the app and test the link
