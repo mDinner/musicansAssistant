@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 exports = module.exports = function( router, Instrument ) {
 
 	router.use(function(req, res, next) {
